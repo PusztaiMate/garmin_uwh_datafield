@@ -70,7 +70,7 @@ class UWHView extends WatchUi.DataField {
         }
     }
 
-    function simulatePressureValue(elapsedTime as Number) as Number {
+    function simulatePressureValue(elapsedTime as Number) as Lang.Float {
         var currentTime = elapsedTime as Number;
         // create a sin curve using the current time
         var sinValue = ((Math.sin(currentTime / 1000.0f) + 1.0f) * 10000.0f) + 100000.0f;
