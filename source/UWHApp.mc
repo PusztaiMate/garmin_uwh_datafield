@@ -4,6 +4,7 @@ import Toybox.WatchUi;
 import Toybox.Sensor;
 
 class UWHApp extends Application.AppBase {
+    var view = new UWHView();
 
     function initialize() {
         AppBase.initialize();
@@ -19,7 +20,7 @@ class UWHApp extends Application.AppBase {
 
     //! Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new UWHView() ] as Array<Views or InputDelegates>;
+        return [view] as Array<Views or InputDelegates>;
     }
 
 }
