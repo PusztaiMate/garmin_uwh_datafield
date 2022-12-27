@@ -1,0 +1,12 @@
+<fitContributions>
+    <fitField
+        id="0" 
+        displayInChart="true"
+        sortOrder="0"
+        precision="2"
+        chartTitle="@Strings.pressure_graph_label"
+        dataLabel="@Strings.pressure_label"
+        unitLabel="@Strings.pressure_unit_label"
+        fillColor="#F0FF00"
+    />
+</fitContributions>

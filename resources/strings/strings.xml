@@ -1,0 +1,8 @@
+<strings>
+    <string id="AppName">UWH</string>
+
+    <string id="label">Pressure</string>
+    <string id="pressure_graph_label">Pressure</string>
+    <string id="pressure_label">Pressure</string>
+    <string id="pressure_unit_label">Pascal</string>
+</strings>
