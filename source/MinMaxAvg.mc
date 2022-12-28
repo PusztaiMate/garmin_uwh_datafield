@@ -16,10 +16,19 @@ class MinMaxAvg {
     }
 
     function addData(value as Lang.Float) {
+        if (count == 0)
+        {
+            min = value;
+            max = value;
+            avg = value;
+        }
+        else
+        {
+            min = min < value ? min : value;
+            max = max > value ? max : value;
+            avg = (avg * count + value) / (count + 1);
+        }
         count += 1;
-        min = min < value ? min : value;
-        max = max > value ? max : value;
-        avg = (avg * count + value) / count;
     }
 
     function reset() as Void {
@@ -27,6 +36,14 @@ class MinMaxAvg {
         max = 0.0f;
         avg = 0.0f;
         count = 0;
+    }
+
+    function minimum() as Lang.Float {
+        return min;
+    }
+
+    function maximum() as Lang.Float {
+        return max;
     }
 
     function average() as Lang.Float {
