@@ -5,4 +5,8 @@
     <string id="pressure_graph_label">Pressure</string>
     <string id="pressure_label">Pressure</string>
     <string id="pressure_unit_label">Pascal</string>
+
+    <string id="relative_position_graph_label">Relative Pos</string>
+    <string id="relative_position_label">Relative Pos</string>
+    <string id="relative_position_unit_label">0-floating|1-underwater|2-bottom</string>
 </strings>
