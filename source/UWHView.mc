@@ -50,7 +50,7 @@ class UWHView extends WatchUi.DataField {
             valueView.locY = valueView.locY + 7;
         }
 
-        (View.findDrawableById("label") as Text).setText(Rez.Strings.label);
+        (View.findDrawableById("label") as Text).setText(Rez.Strings.view_label);
     }
 
     // The given info object contains all the current workout information.
@@ -63,7 +63,7 @@ class UWHView extends WatchUi.DataField {
             if(info.rawAmbientPressure != null){
                 pressureValue = info.rawAmbientPressure as Number;
             } else {
-                System.println("rawAmbientPressure is null, sumulating pressure value");
+                System.println("rawAmbientPressure is null, simulating pressure value");
                 pressureValue = simulatePressureValue(info.elapsedTime);
             }
             fitContributions.setPressureData(pressureValue);
@@ -73,7 +73,7 @@ class UWHView extends WatchUi.DataField {
     function simulatePressureValue(elapsedTime as Number) as Lang.Float {
         var currentTime = elapsedTime as Number;
         // create a sin curve using the current time
-        var sinValue = ((Math.sin(currentTime / 1000.0f) + 1.0f) * 10000.0f) + 100000.0f;
+        var sinValue = ((-1.0f * Math.cos(2.0f * Math.PI * currentTime / 10000.0f) + 1.0f) * 15000.0f) + 100000.0f;
         return sinValue;
     }
 
